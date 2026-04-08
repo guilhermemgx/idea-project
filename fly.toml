@@ -1,15 +1,15 @@
-# fly.toml app configuration file generated for back on 2026-04-08T11:26:49-03:00
+# fly.toml app configuration file generated for idea-project on 2026-04-08T14:17:05Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'back'
-primary_region = 'gru'
+app = 'idea-project'
+primary_region = 'ams'
 
 [build]
 
 [http_service]
-  internal_port = 3000
+  internal_port = 8080
   force_https = true
   auto_stop_machines = 'stop'
   auto_start_machines = true
@@ -17,6 +17,7 @@ primary_region = 'gru'
   processes = ['app']
 
 [[vm]]
-  memory = '256mb'
+  memory = '1gb'
+  cpu_kind = 'shared'
   cpus = 1
   memory_mb = 256
