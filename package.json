@@ -1,0 +1,29 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "migrate": "node-pg-migrate -j ts -m src/db/migrations --envPath .env"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cors": "^11.2.0",
+    "fastify": "^5.8.4",
+    "pg": "^8.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "@types/pg": "^8.20.0",
+    "dotenv": "^17.4.1",
+    "node-pg-migrate": "^8.0.4",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  }
+}
